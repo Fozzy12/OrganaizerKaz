@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.groupV = new System.Windows.Forms.GroupBox();
-            this.groupO = new System.Windows.Forms.GroupBox();
-            this.btnFil = new System.Windows.Forms.Button();
-            this.btnFin = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.cmbM = new System.Windows.Forms.ComboBox();
             this.checkC = new System.Windows.Forms.CheckBox();
             this.checkE = new System.Windows.Forms.CheckBox();
-            this.cmbM = new System.Windows.Forms.ComboBox();
+            this.groupO = new System.Windows.Forms.GroupBox();
+            this.btnFil = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnFin = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Дата = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Время = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,44 +57,13 @@
             this.groupV.TabStop = false;
             this.groupV.Text = "Вид";
             // 
-            // groupO
+            // cmbM
             // 
-            this.groupO.Controls.Add(this.btnFil);
-            this.groupO.Controls.Add(this.btnAdd);
-            this.groupO.Controls.Add(this.btnFin);
-            this.groupO.Location = new System.Drawing.Point(0, 262);
-            this.groupO.Name = "groupO";
-            this.groupO.Size = new System.Drawing.Size(400, 100);
-            this.groupO.TabIndex = 0;
-            this.groupO.TabStop = false;
-            this.groupO.Text = "Операции";
-            // 
-            // btnFil
-            // 
-            this.btnFil.Location = new System.Drawing.Point(7, 19);
-            this.btnFil.Name = "btnFil";
-            this.btnFil.Size = new System.Drawing.Size(125, 60);
-            this.btnFil.TabIndex = 0;
-            this.btnFil.Text = "Фильтр";
-            this.btnFil.UseVisualStyleBackColor = true;
-            // 
-            // btnFin
-            // 
-            this.btnFin.Location = new System.Drawing.Point(138, 19);
-            this.btnFin.Name = "btnFin";
-            this.btnFin.Size = new System.Drawing.Size(125, 60);
-            this.btnFin.TabIndex = 1;
-            this.btnFin.Text = "Поиск";
-            this.btnFin.UseVisualStyleBackColor = true;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(269, 19);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(125, 60);
-            this.btnAdd.TabIndex = 2;
-            this.btnAdd.Text = "Добавить";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.cmbM.FormattingEnabled = true;
+            this.cmbM.Location = new System.Drawing.Point(201, 29);
+            this.cmbM.Name = "cmbM";
+            this.cmbM.Size = new System.Drawing.Size(154, 21);
+            this.cmbM.TabIndex = 5;
             // 
             // checkC
             // 
@@ -116,13 +85,44 @@
             this.checkE.Text = "Все события";
             this.checkE.UseVisualStyleBackColor = true;
             // 
-            // cmbM
+            // groupO
             // 
-            this.cmbM.FormattingEnabled = true;
-            this.cmbM.Location = new System.Drawing.Point(201, 29);
-            this.cmbM.Name = "cmbM";
-            this.cmbM.Size = new System.Drawing.Size(154, 21);
-            this.cmbM.TabIndex = 5;
+            this.groupO.Controls.Add(this.btnFil);
+            this.groupO.Controls.Add(this.btnAdd);
+            this.groupO.Controls.Add(this.btnFin);
+            this.groupO.Location = new System.Drawing.Point(0, 412);
+            this.groupO.Name = "groupO";
+            this.groupO.Size = new System.Drawing.Size(400, 100);
+            this.groupO.TabIndex = 0;
+            this.groupO.TabStop = false;
+            this.groupO.Text = "Операции";
+            // 
+            // btnFil
+            // 
+            this.btnFil.Location = new System.Drawing.Point(7, 19);
+            this.btnFil.Name = "btnFil";
+            this.btnFil.Size = new System.Drawing.Size(125, 60);
+            this.btnFil.TabIndex = 0;
+            this.btnFil.Text = "Фильтр";
+            this.btnFil.UseVisualStyleBackColor = true;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(269, 19);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(125, 60);
+            this.btnAdd.TabIndex = 2;
+            this.btnAdd.Text = "Добавить";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            // 
+            // btnFin
+            // 
+            this.btnFin.Location = new System.Drawing.Point(138, 19);
+            this.btnFin.Name = "btnFin";
+            this.btnFin.Size = new System.Drawing.Size(125, 60);
+            this.btnFin.TabIndex = 1;
+            this.btnFin.Text = "Поиск";
+            this.btnFin.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -134,30 +134,34 @@
             this.Event});
             this.dataGridView1.Location = new System.Drawing.Point(0, 106);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(400, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(400, 300);
             this.dataGridView1.TabIndex = 6;
             // 
             // Дата
             // 
-            this.Дата.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Дата.FillWeight = 15.19081F;
             this.Дата.HeaderText = "Дата";
             this.Дата.Name = "Дата";
+            this.Дата.Width = 119;
             // 
             // Время
             // 
+            this.Время.FillWeight = 223.4776F;
             this.Время.HeaderText = "Время";
             this.Время.Name = "Время";
+            this.Время.Width = 119;
             // 
             // Event
             // 
             this.Event.HeaderText = "События";
             this.Event.Name = "Event";
+            this.Event.Width = 119;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(409, 516);
             this.Controls.Add(this.groupO);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupV);
