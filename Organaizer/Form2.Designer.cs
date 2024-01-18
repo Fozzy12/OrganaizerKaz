@@ -47,6 +47,7 @@
             // 
             // groupV
             // 
+            this.groupV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.groupV.Controls.Add(this.cmbM);
             this.groupV.Controls.Add(this.checkC);
             this.groupV.Controls.Add(this.checkE);
@@ -87,6 +88,7 @@
             // 
             // groupO
             // 
+            this.groupO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.groupO.Controls.Add(this.btnFil);
             this.groupO.Controls.Add(this.btnAdd);
             this.groupO.Controls.Add(this.btnFin);
@@ -161,6 +163,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(409, 516);
             this.Controls.Add(this.groupO);
             this.Controls.Add(this.dataGridView1);
