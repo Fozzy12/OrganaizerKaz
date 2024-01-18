@@ -53,6 +53,7 @@
             this.txtP.Name = "txtP";
             this.txtP.Size = new System.Drawing.Size(328, 20);
             this.txtP.TabIndex = 14;
+            
             // 
             // txtL
             // 
@@ -72,6 +73,7 @@
             this.checkShow.TabIndex = 12;
             this.checkShow.Text = "Посмотреть";
             this.checkShow.UseVisualStyleBackColor = false;
+            this.checkShow.CheckedChanged += new System.EventHandler(this.checkShow_CheckedChanged);
             // 
             // label2
             // 
@@ -104,6 +106,7 @@
             this.btnExit.TabIndex = 9;
             this.btnExit.Text = "Выход";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // Form1
             // 

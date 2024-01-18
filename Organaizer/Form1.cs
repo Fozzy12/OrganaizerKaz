@@ -16,5 +16,22 @@ namespace Organaizer
         {
             InitializeComponent();
         }
+
+        private void checkShow_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkShow.Checked)
+            {
+                txtP.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtP.UseSystemPasswordChar = true;
+            }
+        }
+        
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
