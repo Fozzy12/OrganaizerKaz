@@ -101,30 +101,33 @@
             // 
             // btnFil
             // 
+            this.btnFil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnFil.Location = new System.Drawing.Point(7, 19);
             this.btnFil.Name = "btnFil";
             this.btnFil.Size = new System.Drawing.Size(125, 60);
             this.btnFil.TabIndex = 0;
             this.btnFil.Text = "Фильтр";
-            this.btnFil.UseVisualStyleBackColor = true;
+            this.btnFil.UseVisualStyleBackColor = false;
             // 
             // btnAdd
             // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnAdd.Location = new System.Drawing.Point(269, 19);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(125, 60);
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Добавить";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             // 
             // btnFin
             // 
+            this.btnFin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnFin.Location = new System.Drawing.Point(138, 19);
             this.btnFin.Name = "btnFin";
             this.btnFin.Size = new System.Drawing.Size(125, 60);
             this.btnFin.TabIndex = 1;
             this.btnFin.Text = "Поиск";
-            this.btnFin.UseVisualStyleBackColor = true;
+            this.btnFin.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
