@@ -46,6 +46,7 @@
             this.btnB.TabIndex = 15;
             this.btnB.Text = "Войти";
             this.btnB.UseVisualStyleBackColor = false;
+            this.btnB.Click += new System.EventHandler(this.btnB_Click);
             // 
             // txtP
             // 
@@ -53,7 +54,7 @@
             this.txtP.Name = "txtP";
             this.txtP.Size = new System.Drawing.Size(328, 20);
             this.txtP.TabIndex = 14;
-            
+            this.txtP.UseSystemPasswordChar = true;
             // 
             // txtL
             // 
@@ -61,6 +62,7 @@
             this.txtL.Name = "txtL";
             this.txtL.Size = new System.Drawing.Size(328, 20);
             this.txtL.TabIndex = 13;
+            
             // 
             // checkShow
             // 

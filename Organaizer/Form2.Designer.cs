@@ -30,8 +30,6 @@
         {
             this.groupV = new System.Windows.Forms.GroupBox();
             this.cmbM = new System.Windows.Forms.ComboBox();
-            this.checkC = new System.Windows.Forms.CheckBox();
-            this.checkE = new System.Windows.Forms.CheckBox();
             this.groupO = new System.Windows.Forms.GroupBox();
             this.btnFil = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -40,6 +38,8 @@
             this.Дата = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Время = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Event = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.groupV.SuspendLayout();
             this.groupO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -48,9 +48,9 @@
             // groupV
             // 
             this.groupV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.groupV.Controls.Add(this.radioButton2);
+            this.groupV.Controls.Add(this.radioButton1);
             this.groupV.Controls.Add(this.cmbM);
-            this.groupV.Controls.Add(this.checkC);
-            this.groupV.Controls.Add(this.checkE);
             this.groupV.Location = new System.Drawing.Point(0, 0);
             this.groupV.Name = "groupV";
             this.groupV.Size = new System.Drawing.Size(400, 100);
@@ -65,26 +65,6 @@
             this.cmbM.Name = "cmbM";
             this.cmbM.Size = new System.Drawing.Size(154, 21);
             this.cmbM.TabIndex = 5;
-            // 
-            // checkC
-            // 
-            this.checkC.AutoSize = true;
-            this.checkC.Location = new System.Drawing.Point(17, 29);
-            this.checkC.Name = "checkC";
-            this.checkC.Size = new System.Drawing.Size(123, 17);
-            this.checkC.TabIndex = 3;
-            this.checkC.Text = "Всё по категориям";
-            this.checkC.UseVisualStyleBackColor = true;
-            // 
-            // checkE
-            // 
-            this.checkE.AutoSize = true;
-            this.checkE.Location = new System.Drawing.Point(17, 62);
-            this.checkE.Name = "checkE";
-            this.checkE.Size = new System.Drawing.Size(91, 17);
-            this.checkE.TabIndex = 4;
-            this.checkE.Text = "Все события";
-            this.checkE.UseVisualStyleBackColor = true;
             // 
             // groupO
             // 
@@ -162,6 +142,28 @@
             this.Event.Name = "Event";
             this.Event.Width = 119;
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(15, 29);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(122, 17);
+            this.radioButton1.TabIndex = 6;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Все по категориям";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(15, 62);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(90, 17);
+            this.radioButton2.TabIndex = 7;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Все события";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,13 +189,13 @@
         private System.Windows.Forms.GroupBox groupO;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox cmbM;
-        private System.Windows.Forms.CheckBox checkE;
-        private System.Windows.Forms.CheckBox checkC;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnFin;
         private System.Windows.Forms.Button btnFil;
         private System.Windows.Forms.DataGridViewTextBoxColumn Дата;
         private System.Windows.Forms.DataGridViewTextBoxColumn Время;
         private System.Windows.Forms.DataGridViewTextBoxColumn Event;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
