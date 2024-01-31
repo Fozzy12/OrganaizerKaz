@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupV = new System.Windows.Forms.GroupBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.cmbM = new System.Windows.Forms.ComboBox();
             this.groupO = new System.Windows.Forms.GroupBox();
             this.btnFil = new System.Windows.Forms.Button();
@@ -38,8 +40,6 @@
             this.Дата = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Время = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Event = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.groupV.SuspendLayout();
             this.groupO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -57,6 +57,26 @@
             this.groupV.TabIndex = 0;
             this.groupV.TabStop = false;
             this.groupV.Text = "Вид";
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(15, 67);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(91, 17);
+            this.checkBox2.TabIndex = 9;
+            this.checkBox2.Text = "Все события";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(15, 29);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(123, 17);
+            this.checkBox1.TabIndex = 8;
+            this.checkBox1.Text = "Все по категориям";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // cmbM
             // 
@@ -82,6 +102,7 @@
             // btnFil
             // 
             this.btnFil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnFil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnFil.Location = new System.Drawing.Point(7, 19);
             this.btnFil.Name = "btnFil";
             this.btnFil.Size = new System.Drawing.Size(125, 60);
@@ -92,6 +113,7 @@
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnAdd.Location = new System.Drawing.Point(269, 19);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(125, 60);
@@ -102,6 +124,7 @@
             // btnFin
             // 
             this.btnFin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnFin.Location = new System.Drawing.Point(138, 19);
             this.btnFin.Name = "btnFin";
             this.btnFin.Size = new System.Drawing.Size(125, 60);
@@ -141,26 +164,6 @@
             this.Event.HeaderText = "События";
             this.Event.Name = "Event";
             this.Event.Width = 119;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(15, 29);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(123, 17);
-            this.checkBox1.TabIndex = 8;
-            this.checkBox1.Text = "Все по категориям";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(15, 67);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(91, 17);
-            this.checkBox2.TabIndex = 9;
-            this.checkBox2.Text = "Все события";
-            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 

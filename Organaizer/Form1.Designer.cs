@@ -40,6 +40,7 @@
             // btnB
             // 
             this.btnB.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnB.Location = new System.Drawing.Point(15, 136);
             this.btnB.Name = "btnB";
             this.btnB.Size = new System.Drawing.Size(150, 50);
@@ -62,7 +63,6 @@
             this.txtL.Name = "txtL";
             this.txtL.Size = new System.Drawing.Size(328, 20);
             this.txtL.TabIndex = 13;
-            
             // 
             // checkShow
             // 
@@ -102,6 +102,7 @@
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnExit.Location = new System.Drawing.Point(192, 136);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(150, 50);
