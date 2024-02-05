@@ -115,7 +115,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(354, 211);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(354, 196);
             this.Controls.Add(this.btnB);
             this.Controls.Add(this.txtP);
             this.Controls.Add(this.txtL);
@@ -123,6 +124,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExit);
+            this.MaximumSize = new System.Drawing.Size(370, 235);
+            this.MinimumSize = new System.Drawing.Size(370, 235);
             this.Name = "Form1";
             this.Text = "Авторизация";
             this.ResumeLayout(false);

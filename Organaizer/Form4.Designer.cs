@@ -49,13 +49,14 @@
             // 
             // btnAddE
             // 
+            this.btnAddE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.btnAddE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnAddE.Location = new System.Drawing.Point(30, 284);
             this.btnAddE.Name = "btnAddE";
             this.btnAddE.Size = new System.Drawing.Size(480, 55);
             this.btnAddE.TabIndex = 14;
             this.btnAddE.Text = "Добавить";
-            this.btnAddE.UseVisualStyleBackColor = true;
+            this.btnAddE.UseVisualStyleBackColor = false;
             this.btnAddE.Click += new System.EventHandler(this.btnAddE_Click);
             // 
             // txtN
@@ -114,7 +115,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(100)))));
+            this.ClientSize = new System.Drawing.Size(544, 350);
             this.Controls.Add(this.Time);
             this.Controls.Add(this.btnAddE);
             this.Controls.Add(this.txtN);
@@ -123,8 +125,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.MounthCalendar);
+            this.MaximumSize = new System.Drawing.Size(560, 389);
+            this.MinimumSize = new System.Drawing.Size(560, 389);
             this.Name = "Form4";
-            this.Text = "Form4";
+            this.Text = "Добавить События";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -29,18 +29,17 @@
         private void InitializeComponent()
         {
             this.groupV = new System.Windows.Forms.GroupBox();
+            this.rb2 = new System.Windows.Forms.RadioButton();
+            this.rb1 = new System.Windows.Forms.RadioButton();
             this.cmbM = new System.Windows.Forms.ComboBox();
             this.groupO = new System.Windows.Forms.GroupBox();
-            this.btnFil = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.btnFin = new System.Windows.Forms.Button();
             this.EventsBox = new System.Windows.Forms.DataGridView();
-            this.rb1 = new System.Windows.Forms.RadioButton();
-            this.rb2 = new System.Windows.Forms.RadioButton();
             this.O = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Дата = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Время = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Event = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnExit = new System.Windows.Forms.Button();
             this.groupV.SuspendLayout();
             this.groupO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EventsBox)).BeginInit();
@@ -59,6 +58,29 @@
             this.groupV.TabStop = false;
             this.groupV.Text = "Вид";
             // 
+            // rb2
+            // 
+            this.rb2.AutoSize = true;
+            this.rb2.Location = new System.Drawing.Point(12, 63);
+            this.rb2.Name = "rb2";
+            this.rb2.Size = new System.Drawing.Size(90, 17);
+            this.rb2.TabIndex = 7;
+            this.rb2.TabStop = true;
+            this.rb2.Text = "Все события";
+            this.rb2.UseVisualStyleBackColor = true;
+            // 
+            // rb1
+            // 
+            this.rb1.AutoSize = true;
+            this.rb1.Location = new System.Drawing.Point(12, 29);
+            this.rb1.Name = "rb1";
+            this.rb1.Size = new System.Drawing.Size(122, 17);
+            this.rb1.TabIndex = 6;
+            this.rb1.TabStop = true;
+            this.rb1.Text = "Все по категориям";
+            this.rb1.UseVisualStyleBackColor = true;
+            this.rb1.CheckedChanged += new System.EventHandler(this.rb1_CheckedChanged);
+            // 
             // cmbM
             // 
             this.cmbM.FormattingEnabled = true;
@@ -70,9 +92,8 @@
             // groupO
             // 
             this.groupO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.groupO.Controls.Add(this.btnFil);
+            this.groupO.Controls.Add(this.btnExit);
             this.groupO.Controls.Add(this.btnAdd);
-            this.groupO.Controls.Add(this.btnFin);
             this.groupO.Location = new System.Drawing.Point(0, 412);
             this.groupO.Name = "groupO";
             this.groupO.Size = new System.Drawing.Size(400, 100);
@@ -80,39 +101,17 @@
             this.groupO.TabStop = false;
             this.groupO.Text = "Операции";
             // 
-            // btnFil
-            // 
-            this.btnFil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnFil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnFil.Location = new System.Drawing.Point(7, 19);
-            this.btnFil.Name = "btnFil";
-            this.btnFil.Size = new System.Drawing.Size(125, 60);
-            this.btnFil.TabIndex = 0;
-            this.btnFil.Text = "Фильтр";
-            this.btnFil.UseVisualStyleBackColor = false;
-            // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAdd.Location = new System.Drawing.Point(269, 19);
+            this.btnAdd.Location = new System.Drawing.Point(12, 32);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(125, 60);
+            this.btnAdd.Size = new System.Drawing.Size(176, 60);
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Добавить";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnFin
-            // 
-            this.btnFin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnFin.Location = new System.Drawing.Point(138, 19);
-            this.btnFin.Name = "btnFin";
-            this.btnFin.Size = new System.Drawing.Size(125, 60);
-            this.btnFin.TabIndex = 1;
-            this.btnFin.Text = "Поиск";
-            this.btnFin.UseVisualStyleBackColor = false;
             // 
             // EventsBox
             // 
@@ -127,29 +126,6 @@
             this.EventsBox.Name = "EventsBox";
             this.EventsBox.Size = new System.Drawing.Size(400, 300);
             this.EventsBox.TabIndex = 6;
-            // 
-            // rb1
-            // 
-            this.rb1.AutoSize = true;
-            this.rb1.Location = new System.Drawing.Point(12, 29);
-            this.rb1.Name = "rb1";
-            this.rb1.Size = new System.Drawing.Size(122, 17);
-            this.rb1.TabIndex = 6;
-            this.rb1.TabStop = true;
-            this.rb1.Text = "Все по категориям";
-            this.rb1.UseVisualStyleBackColor = true;
-            this.rb1.CheckedChanged += new System.EventHandler(this.rb1_CheckedChanged);
-            // 
-            // rb2
-            // 
-            this.rb2.AutoSize = true;
-            this.rb2.Location = new System.Drawing.Point(12, 63);
-            this.rb2.Name = "rb2";
-            this.rb2.Size = new System.Drawing.Size(90, 17);
-            this.rb2.TabIndex = 7;
-            this.rb2.TabStop = true;
-            this.rb2.Text = "Все события";
-            this.rb2.UseVisualStyleBackColor = true;
             // 
             // O
             // 
@@ -177,6 +153,18 @@
             this.Event.Name = "Event";
             this.Event.Width = 109;
             // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnExit.Location = new System.Drawing.Point(211, 32);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(164, 60);
+            this.btnExit.TabIndex = 3;
+            this.btnExit.Text = "Выход";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,6 +174,8 @@
             this.Controls.Add(this.groupO);
             this.Controls.Add(this.EventsBox);
             this.Controls.Add(this.groupV);
+            this.MaximumSize = new System.Drawing.Size(425, 555);
+            this.MinimumSize = new System.Drawing.Size(425, 555);
             this.Name = "Form2";
             this.Text = "Органайзер";
             this.groupV.ResumeLayout(false);
@@ -203,13 +193,12 @@
         private System.Windows.Forms.DataGridView EventsBox;
         private System.Windows.Forms.ComboBox cmbM;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnFin;
-        private System.Windows.Forms.Button btnFil;
         private System.Windows.Forms.RadioButton rb2;
         private System.Windows.Forms.RadioButton rb1;
         private System.Windows.Forms.DataGridViewTextBoxColumn O;
         private System.Windows.Forms.DataGridViewTextBoxColumn Дата;
         private System.Windows.Forms.DataGridViewTextBoxColumn Время;
         private System.Windows.Forms.DataGridViewTextBoxColumn Event;
+        private System.Windows.Forms.Button btnExit;
     }
 }
