@@ -49,7 +49,6 @@ namespace Organaizer
 
         private void btnB_Click(object sender, EventArgs e)
         {
-            // Проверка логина и пароля
             string username = txtL.Text;
             string password = txtP.Text;
 
@@ -67,7 +66,6 @@ namespace Organaizer
         }
         private bool CheckCredentials(string username, string password)
         {
-            // Проверка логина и пароля (здесь необходимо добавить вашу логику проверки)
             return username == "Kazanbaev" && password == "qwerty1234";
         }
     }
