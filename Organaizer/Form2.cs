@@ -48,11 +48,9 @@ namespace Organaizer
             }
         }
 
-        // Метод получения статусов
         private List<string> StatuseE()
         {
             List<string> uniqueStatuses = new List<string>();
-            // Добавление статусов
             foreach (var eventData in eventsList)
             {
                 if (!uniqueStatuses.Contains(eventData.EventStatus))
@@ -60,7 +58,6 @@ namespace Organaizer
                     uniqueStatuses.Add(eventData.EventStatus);
                 }
             }
-
             return uniqueStatuses;
         }
 
