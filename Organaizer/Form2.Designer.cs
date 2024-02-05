@@ -35,11 +35,11 @@
             this.groupO = new System.Windows.Forms.GroupBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.EventsBox = new System.Windows.Forms.DataGridView();
+            this.btnExit = new System.Windows.Forms.Button();
             this.O = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Дата = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Время = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Event = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnExit = new System.Windows.Forms.Button();
             this.groupV.SuspendLayout();
             this.groupO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EventsBox)).BeginInit();
@@ -127,9 +127,21 @@
             this.EventsBox.Size = new System.Drawing.Size(400, 300);
             this.EventsBox.TabIndex = 6;
             // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnExit.Location = new System.Drawing.Point(211, 32);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(164, 60);
+            this.btnExit.TabIndex = 3;
+            this.btnExit.Text = "Выход";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // O
             // 
-            this.O.HeaderText = "O";
+            this.O.HeaderText = "C";
             this.O.Name = "O";
             this.O.Width = 30;
             // 
@@ -152,18 +164,6 @@
             this.Event.HeaderText = "События";
             this.Event.Name = "Event";
             this.Event.Width = 109;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnExit.Location = new System.Drawing.Point(211, 32);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(164, 60);
-            this.btnExit.TabIndex = 3;
-            this.btnExit.Text = "Выход";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // Form2
             // 
@@ -195,10 +195,10 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.RadioButton rb2;
         private System.Windows.Forms.RadioButton rb1;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.DataGridViewTextBoxColumn O;
         private System.Windows.Forms.DataGridViewTextBoxColumn Дата;
         private System.Windows.Forms.DataGridViewTextBoxColumn Время;
         private System.Windows.Forms.DataGridViewTextBoxColumn Event;
-        private System.Windows.Forms.Button btnExit;
     }
 }
