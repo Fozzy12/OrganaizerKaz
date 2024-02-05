@@ -8,24 +8,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Organaizer
 {
     public partial class Form4 : Form
     {
 
-        public event Action<Events> Event;
+        public event Action<EventS> Event;
 
         public Form4()
         {
             InitializeComponent();
+            cmbE.Items.AddRange(new[] { "❌", "✔️", "⌛" });
         }
 
-        public class Events
+        public class EventS
         {
             public string NameE { get; set; }
-            public DateTime Ebox { get; set; }
-            public string DateE { get; set; }
-
+            public DateTime DateE { get; set; }
+            public string Ebox { get; set; }
         }
 
         public string NameE()
@@ -45,13 +46,12 @@ namespace Organaizer
 
         private void btnAddE_Click(object sender, EventArgs e)
         {
-            Events events = new Events
+            EventS events = new EventS
             {
                 NameE = txtN.Text,
                 Ebox = cmbE.SelectedItem?.ToString(),
                 DateE = MounthCalendar.SelectionStart.Date + Time.Value.TimeOfDay
             };
-            // Вызов добавления события и передача данных
             Event?.Invoke(events);
         }
     }

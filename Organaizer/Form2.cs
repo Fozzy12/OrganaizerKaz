@@ -22,13 +22,12 @@ namespace Organaizer
 
         private void StatusFilter(object sender, EventArgs e)
         {
-            // Обновление DataGridView
             DataUpgrade();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Form4.Events eventData = AddForm();
+            Form4.EventS eventData = AddForm();
             DataUpgrade();
         }
 
