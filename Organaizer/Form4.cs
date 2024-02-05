@@ -19,7 +19,7 @@ namespace Organaizer
         public Form4()
         {
             InitializeComponent();
-            cmbE.Items.AddRange(new[] { "❌", "✔️", "⌛" });
+            cmbE.Items.AddRange(new[] { "☘︎", "🕷", "★" });
         }
 
         public class EventS

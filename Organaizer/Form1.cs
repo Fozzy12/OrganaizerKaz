@@ -68,7 +68,7 @@ namespace Organaizer
         private bool CheckCredentials(string username, string password)
         {
             // Проверка логина и пароля (здесь необходимо добавить вашу логику проверки)
-            return username == "Kazanbaev" && password == "admin123";
+            return username == "Kazanbaev" && password == "qwerty1234";
         }
     }
 }

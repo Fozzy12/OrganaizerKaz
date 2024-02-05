@@ -43,6 +43,7 @@
             this.Time.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.Time.Location = new System.Drawing.Point(30, 244);
             this.Time.Name = "Time";
+            this.Time.ShowUpDown = true;
             this.Time.Size = new System.Drawing.Size(106, 20);
             this.Time.TabIndex = 15;
             // 

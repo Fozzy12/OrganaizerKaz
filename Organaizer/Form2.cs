@@ -7,17 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Organaizer.Form4;
 
 namespace Organaizer
 {
     public partial class Form2 : Form
     {
 
-        private List<Events> eventsList = new List<Events>();
+        private List<EventS> eventsList = new List<EventS>();
 
         public Form2()
         {
             InitializeComponent();
+            cmbM.SelectedIndexChanged += StatusFilter;
+            rb1.CheckedChanged += rb1_CheckedChanged;
+            rb2.CheckedChanged += rb1_CheckedChanged;
+            cmbM.Visible = false;
+            rb1.Checked = true;
         }
 
         private void StatusFilter(object sender, EventArgs e)
@@ -28,6 +34,7 @@ namespace Organaizer
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Form4.EventS eventData = AddForm();
+            eventsList.Add(eventData);
             DataUpgrade();
         }
 
@@ -52,21 +59,21 @@ namespace Organaizer
             List<string> uniqueStatuses = new List<string>();
             foreach (var eventData in eventsList)
             {
-                if (!uniqueStatuses.Contains(eventData.EventStatus))
+                if (!uniqueStatuses.Contains(eventData.Ebox))
                 {
-                    uniqueStatuses.Add(eventData.EventStatus);
+                    uniqueStatuses.Add(eventData.Ebox);
                 }
             }
             return uniqueStatuses;
         }
 
         // Метод для получения данных о событии из формы AddEvent
-        private Form4.Events AddForm()
+        private Form4.EventS AddForm()
         {
             Form4 addEventForm = new Form4();
             addEventForm.ShowDialog();
 
-            return new Form4.Events
+            return new Form4.EventS
             {
                 NameE = addEventForm.NameE(),
                 Ebox = addEventForm.Ebox(),
@@ -74,12 +81,12 @@ namespace Organaizer
             };
         }
 
-        private IEnumerable<Form4.Events> FilterE()
+        private IEnumerable<Form4.EventS> FilterE()
         {
             if (rb1.Checked)
             {
                 string selectedStatus = cmbM.SelectedItem?.ToString() ?? string.Empty;
-                return eventsList.FindAll(eventData => eventData.EventStatus == selectedStatus);
+                return eventsList.FindAll(eventData => eventData.Ebox == selectedStatus);
             }
             else
             {
