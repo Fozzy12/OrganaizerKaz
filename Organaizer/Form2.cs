@@ -67,7 +67,6 @@ namespace Organaizer
             return uniqueStatuses;
         }
 
-        // Метод для получения данных о событии из формы AddEvent
         private Form4.EventS AddForm()
         {
             Form4 addEventForm = new Form4();
