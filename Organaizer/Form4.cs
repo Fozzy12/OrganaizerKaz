@@ -24,16 +24,19 @@ namespace Organaizer
 
         public class EventS
         {
+            // Свойство для получения и установки имени события
             public string NameE { get; set; }
+            // Свойство для получения и установки даты события
             public DateTime DateE { get; set; }
+            // Свойство для получения и установки описания события
             public string Ebox { get; set; }
         }
-
+        
         public string NameE()
         {
             return txtN.Text;
         }
-
+      
         public string Ebox()
         {
             return cmbE.SelectedItem?.ToString();
@@ -46,12 +49,14 @@ namespace Organaizer
 
         private void btnAddE_Click(object sender, EventArgs e)
         {
+            // Создаем новый объект события и заполняем его свойства
             EventS events = new EventS
             {
                 NameE = txtN.Text,
                 Ebox = cmbE.SelectedItem?.ToString(),
                 DateE = MounthCalendar.SelectionStart.Date + Time.Value.TimeOfDay
             };
+            // Вызываем делегат event, передавая ему объект события
             Event?.Invoke(events);
         }
     }

@@ -85,9 +85,10 @@ namespace Organaizer
             Form4 AddEForm = new Form4();
             // Открываем форму
             AddEForm.ShowDialog();
-
+            // Возвращаем объект типа form4.events
             return new Form4.EventS
             {
+                // Присваиваем значения свойствам объекта form4.events
                 NameE = AddEForm.NameE(),
                 Ebox = AddEForm.Ebox(),
                 DateE = AddEForm.DateE()
@@ -96,20 +97,26 @@ namespace Organaizer
 
         private IEnumerable<Form4.EventS> FilterE()
         {
+            // Если выбран rb1
             if (rb1.Checked)
             {
+                // Получаем выбранный статус из cmbM
                 string selectedStatus = cmbM.SelectedItem?.ToString() ?? string.Empty;
+                // Возвращаем отфильтрованный список событий согласно выбранному статусу
                 return eventsList.FindAll(eventData => eventData.Ebox == selectedStatus);
             }
             else
             {
+                // Возвращаем полный список событий, если rb1 не выбран
                 return eventsList;
             }
         }
 
         private void rb1_CheckedChanged(object sender, EventArgs e)
         {
+            // Показать выпадающий список cmbM, если rb1 выбран
             cmbM.Visible = rb1.Checked;
+            // Выполнить обновление данных
             DataUpgrade();
         }
 
