@@ -13,40 +13,49 @@ namespace Organaizer
 {
     public partial class Form2 : Form
     {
-
+        // Создание пустого списка событий
         private List<EventS> eventsList = new List<EventS>();
 
         public Form2()
         {
             InitializeComponent();
+            // Добавляем обработчик события изменения выбранного элемента в cmbM
             cmbM.SelectedIndexChanged += StatusFilter;
+            // Добавляем обработчики событий изменения выбранного значения в rb1 и rb2
             rb1.CheckedChanged += rb1_CheckedChanged;
             rb2.CheckedChanged += rb1_CheckedChanged;
+            // Скрываем элемент cmbM
             cmbM.Visible = false;
-            rb1.Checked = true;
+            // Выбираем по умолчанию rb2
+            rb2.Checked = true;
         }
 
         private void StatusFilter(object sender, EventArgs e)
         {
+            // Вызываем метод DataUpgrade
             DataUpgrade();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            // Вызываем метод AddForm(), который возвращает объект типа Form4.EventS
             Form4.EventS eventData = AddForm();
+            // Добавляем полученный объект eventData в список eventsList
             eventsList.Add(eventData);
+            // Вызываем метод DataUpgrade() для обновления данных
             DataUpgrade();
         }
 
         private void DataUpgrade()
         {
+            //Происходит очистка всех строк в таблице
             EventsBox.Rows.Clear();
-
+            //Для каждого элемента eventData из отфильтрованного списка FilterE() происходит добавление строки в таблицу с данными: Ebox, DateE, NameE.
             foreach (var eventData in FilterE())
             {
                 EventsBox.Rows.Add(eventData.Ebox, eventData.DateE.Date.ToString("d"), eventData.DateE.TimeOfDay.ToString(@"hh\:mm"), eventData.NameE);
             }
-
+            // Если cmbM видим, то очищаем его элементы и добавляем в него элементы из списка StatuseE().
             if (cmbM.Visible)
             {
                 cmbM.Items.Clear();
@@ -56,27 +65,32 @@ namespace Organaizer
 
         private List<string> StatuseE()
         {
-            List<string> uniqueStatuses = new List<string>();
+            List<string> unStatus = new List<string>();
+            // Для каждого элемента eventData в списке eventsList проверяем, что значение поля Ebox не содержится в списке unStatus
             foreach (var eventData in eventsList)
             {
-                if (!uniqueStatuses.Contains(eventData.Ebox))
+                // Если значение поля Ebox отсутствует в списке unStatus, то добавляем это значение в список
+                if (!unStatus.Contains(eventData.Ebox))
                 {
-                    uniqueStatuses.Add(eventData.Ebox);
+                    unStatus.Add(eventData.Ebox);
                 }
             }
-            return uniqueStatuses;
+            return unStatus;
         }
 
+        // Метод для получения данных о событии из формы Form4
         private Form4.EventS AddForm()
         {
-            Form4 addEventForm = new Form4();
-            addEventForm.ShowDialog();
+            // Создаем экземпляр формы Form4
+            Form4 AddEForm = new Form4();
+            // Открываем форму
+            AddEForm.ShowDialog();
 
             return new Form4.EventS
             {
-                NameE = addEventForm.NameE(),
-                Ebox = addEventForm.Ebox(),
-                DateE = addEventForm.DateE()
+                NameE = AddEForm.NameE(),
+                Ebox = AddEForm.Ebox(),
+                DateE = AddEForm.DateE()
             };
         }
 

@@ -20,24 +20,32 @@ namespace Organaizer
             InitializeComponent();
             InitializeTooltips();
         }
-
+        // Метод для инициализации подсказок
         private void InitializeTooltips()
         {
+            // Создание объекта для подсказки для текстового поля txtL
             loginToolTip = new ToolTip();
+            // Установка текста подсказки для поля txtL
             loginToolTip.SetToolTip(txtL, "Введите ваш логин!");
+            // Создание объекта для подсказки для текстового поля txtP
             passwordToolTip = new ToolTip();
+            // Установка текста подсказки для поля txtP
             passwordToolTip.SetToolTip(txtP, "Введите ваш пароль!");
         }
 
         private void checkShow_CheckedChanged(object sender, EventArgs e)
         {
+            // Отключение использования звездочек в поле ввода пароля
             txtP.UseSystemPasswordChar = false;
+            // Если флажок выбран
             if (checkShow.Checked)
             {
+                // Отображение текста в поле ввода пароля в виде обычного текста
                 txtP.UseSystemPasswordChar = false;
             }
             else
             {
+                // Отображение текста в поле ввода пароля в виде звездочек
                 txtP.UseSystemPasswordChar = true;
             }
         }
@@ -49,6 +57,7 @@ namespace Organaizer
 
         private void btnB_Click(object sender, EventArgs e)
         {
+            // Получаем значения из текстовых полей
             string username = txtL.Text;
             string password = txtP.Text;
 
