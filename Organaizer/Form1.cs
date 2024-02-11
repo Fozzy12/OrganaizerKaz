@@ -40,6 +40,7 @@ namespace Organaizer
             t = Math.Tan(fi);
             x2 = x1 + (int)((3 * a * t) / (1 + t * t * t));
             y2 = y1 - (int)((3 * a * t * t) / (1 + t * t * t));
+            //Обновления графического интерфейса
             Invalidate();
         }
 

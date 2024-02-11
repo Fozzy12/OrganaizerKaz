@@ -12,31 +12,41 @@ namespace Organaizer
 {
     public partial class Form2 : Form
     {
+        // Это переменная указывает, была ли запущена ракета
         private bool rocketLaunched;
+        // Это переменная хранит текущую высоту, на которой находится ракета
         private int rocketHeight;
 
         public Form2()
         {
             InitializeComponent();
+            //Ракета не запущена.
             rocketLaunched = false;
+            //Высота ракеты равна нулю
             rocketHeight = 0;
         }
 
         private void btnS_Click(object sender, EventArgs e)
         {
+            //Запуск ракеты
             rocketLaunched = true;
+            //Запуск таймера
             timer1.Start();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            // Увеличиваем высоту ракеты на 10
             rocketHeight += 10;
+            // Проверяем, достигла ли ракета максимальной высоты
             if (rocketHeight >= this.Height)
             {
+                // Если да, останавливаем таймер, устанавливаем флаг запуска ракеты на false и сбрасываем высоту
                 timer1.Stop();
                 rocketLaunched = false;
                 rocketHeight = 0;
             }
+            //Обновление отображения
             this.Invalidate();
         }
 
