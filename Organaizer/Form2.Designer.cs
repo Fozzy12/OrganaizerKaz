@@ -68,6 +68,8 @@
             this.ClientSize = new System.Drawing.Size(384, 361);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnStart);
+            this.MaximumSize = new System.Drawing.Size(400, 400);
+            this.MinimumSize = new System.Drawing.Size(400, 400);
             this.Name = "Form2";
             this.Text = "Ядерка";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form2_Paint);

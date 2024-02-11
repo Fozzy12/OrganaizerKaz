@@ -37,9 +37,9 @@
             // btnF
             // 
             this.btnF.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnF.Location = new System.Drawing.Point(80, 300);
+            this.btnF.Location = new System.Drawing.Point(102, 338);
             this.btnF.Name = "btnF";
-            this.btnF.Size = new System.Drawing.Size(100, 50);
+            this.btnF.Size = new System.Drawing.Size(200, 100);
             this.btnF.TabIndex = 0;
             this.btnF.Text = "==>>";
             this.btnF.UseVisualStyleBackColor = true;
@@ -51,10 +51,9 @@
             // 
             // btnExit
             // 
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnExit.Location = new System.Drawing.Point(200, 300);
+            this.btnExit.Location = new System.Drawing.Point(396, 338);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(100, 50);
+            this.btnExit.Size = new System.Drawing.Size(200, 100);
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "Выход";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -64,9 +63,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 361);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnF);
+            this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "Form1";
             this.Text = "Элипс";
             this.Load += new System.EventHandler(this.Form1_Load);
