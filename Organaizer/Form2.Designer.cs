@@ -1,16 +1,16 @@
 ﻿namespace Organaizer
 {
-    partial class Form1
+    partial class Form2
     {
         /// <summary>
-        /// Обязательная переменная конструктора.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Освободить все используемые ресурсы.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,30 +20,31 @@
             base.Dispose(disposing);
         }
 
-        #region Код, автоматически созданный конструктором форм Windows
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Требуемый метод для поддержки конструктора — не изменяйте 
-        /// содержимое этого метода с помощью редактора кода.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btnF = new System.Windows.Forms.Button();
+            this.btnStart = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnF
+            // btnStart
             // 
-            this.btnF.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnF.Location = new System.Drawing.Point(80, 300);
-            this.btnF.Name = "btnF";
-            this.btnF.Size = new System.Drawing.Size(100, 50);
-            this.btnF.TabIndex = 0;
-            this.btnF.Text = "==>>";
-            this.btnF.UseVisualStyleBackColor = true;
-            this.btnF.Click += new System.EventHandler(this.btnF_Click);
+            this.btnStart.BackColor = System.Drawing.Color.Red;
+            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnStart.Location = new System.Drawing.Point(80, 300);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(100, 50);
+            this.btnStart.TabIndex = 1;
+            this.btnStart.Text = "На АМЕРИКУ!!!";
+            this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Click += new System.EventHandler(this.btnS_Click);
             // 
             // timer1
             // 
@@ -60,26 +61,24 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // Form1
+            // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 361);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnF);
-            this.Name = "Form1";
-            this.Text = "Элипс";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
+            this.Controls.Add(this.btnStart);
+            this.Name = "Form2";
+            this.Text = "Ядерка";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form2_Paint);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnF;
+        private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnExit;
     }
 }
-
