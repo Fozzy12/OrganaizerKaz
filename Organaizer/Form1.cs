@@ -31,23 +31,6 @@ namespace Organaizer
             blackPen = new Pen(Color.Black, 4);
         }
 
-        private void btnOpen_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "Image files (*.BMP, *.JPG, " + "*.GIF, *.PNG)|*.bmp;*.jpg;*.gif;*.png";
-            if (dialog.ShowDialog() == DialogResult.OK )
-            {
-                Image image = Image.FromFile( dialog.FileName ); 
-                int width = image.Width;
-                int height = image.Height;
-                pictureBox1.Width = width; 
-                pictureBox1.Height = height;
-                bmp = new Bitmap(image, width, height);
-                pictureBox1.Image = bmp;
-                g = Graphics.FromImage(pictureBox1.Image);
-            }
-        }
-
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
             PreviousPoint.X = e.X;
@@ -66,11 +49,6 @@ namespace Organaizer
                 PreviousPoint.Y = point.Y;
                 pictureBox1.Invalidate();
             }
-        }
-
-        private void btnP_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnSave_Click(object sender, EventArgs e)
